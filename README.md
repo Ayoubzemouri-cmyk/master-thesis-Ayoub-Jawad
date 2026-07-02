@@ -46,15 +46,9 @@ water regions. The system combines:
 
 ### Firmware (ESP32)
 1. Open `code/firmware/ThesisCode.ino` in the **Arduino IDE**.
-2. Install required libraries: **[list them, e.g. MAVLink library,
+2. Install required libraries: **[e.g. MAVLink library,
    Atlas Scientific EZO library, WiFi/BLE libraries used]**
-3. Select board: **ESP32** (specify exact dev board model, e.g.
-   ESP32-WROOM-32).
-4. Connect the Atlas Scientific sensor probes as shown in
-   `hardware/wiring_diagram.png`.
-5. Upload the sketch. The firmware listens for MAVLink messages from
-   the flight/navigation controller and triggers a sampling cycle on
-   the Atlas Scientific sensors when received.
+3. Select board: **ESP32** (ESP32-WROOM-32).
 
 ### AI Vision Model (U-Net terrain segmentation)
-1. Clone this repository:
+1. Clone this repository: 
