@@ -88,7 +88,7 @@ water-quality-thesis/
    ```
 
 3. Download the datasets used for training:
-   - **TU Graz Semantic Drone Dataset**: https://www.tugraz.at/index.php?id=22387
+   - **TU Graz Semantic Drone Dataset**: [https://www.tugraz.at/index.php?id=22387](https://ivc.tugraz.at/research-project/semantic-drone-dataset/)
    - **FloodNet Track-1 Dataset**: https://github.com/BinaLab/FloodNet-Supervised_v1.0
 
    Place the downloaded datasets in a `datasets/` folder alongside the
