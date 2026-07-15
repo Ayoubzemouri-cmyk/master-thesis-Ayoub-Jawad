@@ -1,0 +1,24 @@
+V3 Model Evaluation — Mixed-Domain Training
+============================================================
+
+Training data: TU Graz + FloodNet (combined)
+Train tiles: 58,592
+Test tiles:  12558 (TU Graz: ~5504, FloodNet: ~7054)
+
+Accuracy: 86.67%
+AUC: 0.9282
+
+              precision    recall  f1-score   support
+
+        safe     0.8915    0.9081    0.8997      8267
+      unsafe     0.8163    0.7870    0.8014      4291
+
+    accuracy                         0.8667     12558
+   macro avg     0.8539    0.8475    0.8505     12558
+weighted avg     0.8658    0.8667    0.8661     12558
+
+Confusion Matrix:
+                Predicted
+                Safe    Unsafe
+Actual Safe     7507    760
+       Unsafe    914   3377

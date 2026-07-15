@@ -1,0 +1,33 @@
+
+=== U-Net binary safety segmentation — final test results ===
+
+Dataset:          798 images (400 TU Graz + 398 FloodNet)
+Resolution:       256 x 256
+Train/Val/Test:   638 / 80 / 80
+Class balance:    72.9% safe, 27.1% unsafe
+Architecture:     U-Net (32-64-128-256-512 filters, ~7.77M params)
+Training:         100 epochs, Adam (lr=1e-4), BCE loss, ReduceLROnPlateau
+Augmentation:     horizontal+vertical flips, brightness +-10%
+
+Best validation IoU: see history.json
+
+--- Test set ---
+Pixel accuracy:           89.49%
+IoU (safe class):         0.8662
+IoU (unsafe class):       0.6708
+Mean IoU:                 0.7685
+Average Precision (PR):   0.9804
+Optimal threshold:        0.60  (mIoU at this threshold: 0.7742)
+
+--- Per-dataset IoU ---
+TU Graz   — safe: 0.8442  unsafe: 0.6535  mean: 0.7489
+FloodNet  — safe: 0.8886  unsafe: 0.6927  mean: 0.7906
+
+--- Pixel-level error breakdown ---
+True Positives  (correct safe):     3,568,374  (68.06%)
+True Negatives  (correct unsafe):   1,123,300  (21.43%)
+False Positives (DANGEROUS):          330,745  (6.31%)
+False Negatives (overly cautious):    220,461  (4.20%)
+
+False positive rate:  22.75%
+False negative rate:  5.82%
